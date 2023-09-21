@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto',sans-serif;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.on{
+    display: block;
+    animation-name: fade;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+}
+.bold{
+    font-weight: bold;
+}
+
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.off{
+    display: none;
+}
+
+.flex{
+    display: flex;
+}
+/*Header*/
+
+    /*NAV*/
+    nav{
+        background-color: black;
+    }
+    nav ul li{
+        display: inline-block;
+        font-size: 1.1rem;
+        color: white;
+        padding: 0.75rem 1rem;
+    }
+    nav ul li:last-child{
+        float: right;
+    }
+
+    nav ul li:hover{
+        background-color: rgb(204, 204, 204);
+        color: black;
+    }
+    
+    /*.intro*/
+    header {
+        background-color: gainsboro;;
+    }
+    header .intro{
+        
+        text-align: center;
+        margin-top: 4rem;
+    }
+    header .intro h1{
+        font-size: 3rem;
+    }
+    header .intro p{
+        margin-top: 1rem;
+        font-weight: 500;
+    }
+    header .intro p span {
+        background-color: black;
+        color: white;
+        padding: 0.25rem;
+    }
+
+    /*.img*/
+    .img{
+        margin-top: 3rem;
+        position: relative;
+    }
+    .img img{
+        width: 100%;
+    }
+
+    .img .content{
+        position: absolute;
+        top: 50%;
+        color: white;
+        left: 2rem;
+    }
+    .img .content p:first-of-type{
+        font-size: 3rem;
+    }
+    .img .content p:nth-of-type(2)
+    {
+        font-size: 4.5rem;
+        font-weight: 900;
+    }
+
+    .img .content button{
+        font-size: 1.25rem;
+        padding: 1rem;
+        color: black;
+        background-color: grey;
+        border: none;
+    }
+
+    .img .content button:hover{
+        background-color: rgb(204, 204, 204);
+    }
+
+
+/*Main*/
+    /*Subcribe*/
+    main > div:first-child {
+        position: fixed;
+        top:10rem;
+        width: 100%;
+    }
+    #subcribe{
+        background-color: white;
+        padding: 3rem;
+        width: 70%;
+        margin: auto;
+        transition-property: all;
+        transition-duration: 2s;
+        transition-timing-function: linear;
+    }
+
+    #subcribe h1{
+        letter-spacing: 0.25rem;
+        margin-bottom: 1.5rem;
+    }
+
+    #subcribe .flex {
+        justify-content: space-between;
+    }
+
+    #subcribe .flex button{
+        display: block;
+        border: none;
+        height: fit-content;
+        font-size: 1.25rem;
+        padding: 0.5rem 1rem;
+        background-color: transparent;
+    }
+
+    #subcribe .flex button:hover{
+        background-color: grey;
+    }
+
+    #subcribe p{
+        margin-bottom: 1rem;
+    }
+
+    #subcribe input{
+        display: block;
+        width: 100%;
+        padding: 0.5rem;
+        border-color: 1px solid  rgb(204, 204, 204);
+        outline: none;
+        margin-bottom: 1rem;
+    }
+    
+    ::placeholder{
+        font-size: 1.1rem;
+    }
+
+    #subcribe button[type=submit]{
+        display: block;
+        width: 100%;
+        color: white;
+        background-color: red;
+        border: none;
+        padding: 1rem;
+        font-size: 1.25rem  ;
+    }
+
+
+    .page{
+        padding: 1rem 2rem;
+        background-color: rgb(218, 218, 218);
+        gap: 2rem;
+    }
+    /*#conent*/
+    #content{
+        width: 70%;
+        background-color: white;
+        padding: 2rem 1rem;
+    }
+    #content ul li.post h2{
+        text-align: center;
+        background-color: transparent;
+        margin-bottom: 2rem;
+        
+    }
+    #content ul li.post p.time{
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    #content ul li.post img{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    #content ul li.post p.tus{
+        word-spacing: 0.25rem;
+        line-height: 1.5rem;
+    }
+
+    #content ul li.post >div.flex{
+        justify-content: space-between;
+        margin: 3rem 0;
+        align-items: center;
+    }
+    #content ul li.post button.like{
+        padding: 0.5rem 1rem;
+        font-weight: bold;
+        border: 1px solid rgb(214, 212, 212);
+        background-color: transparent;
+    }
+    #content ul li.post button.like:hover{
+        background-color: rgb(204, 204, 204);
+    }
+    #content ul li.post button.replies{
+        background-color: black;
+        color: white;
+        padding: 0.5rem 1rem;
+        border: none;
+    }
+    #content ul li.post button.replies:hover{
+        background-color: rgb(204, 204, 204);
+        color: black;
+    }
+    .repliesCount{
+        color: black;
+        background-color: white;
+        padding: 0.25rem 0.5rem;
+    }
+    
+
+    #content ul li.post ul.comment li.flex{
+        gap:2rem;
+        margin-top: 2rem;
+    }
+
+
+    #content ul li.post ul.comment li.flex img{ 
+        width: 10%;
+    }
+    #content ul li.post ul.comment li.flex .info .date{
+        color: rgb(213, 213, 213);
+    }
+    #content ul li.post ul.comment li.flex .info .content{
+        margin-top: 2rem;
+    }
+    .show{
+        display: block;
+    }
+    .tus{
+        margin: 2rem 0;
+    }
+
+    /*aside*/
+
+    .page aside{
+        width: 35%;
+        flex-flow: column nowrap;
+        gap: 3rem;
+        
+    }
+
+        /*#introduction*/
+        #introduction img{
+            width: 100%;
+            filter: grayscale(100%);
+        }
+
+        #introduction div{
+            margin-top: -1rem;
+            background-color: black;
+            color: white;
+            padding: 1.5rem 1rem ;
+            display: flex;
+            gap: 2rem;
+            flex-direction: column;
+        }
+
+        /*#popularPost*/
+        h3.asideTitle{
+            background-color: black;
+            color: white;
+            padding: 1.75rem 1rem;
+        }
+        #popularPost > ul > li{
+            background-color: white;
+            padding: 1rem 1rem;
+            gap: 1rem; 
+            border-bottom: 1px solid rgb(204, 204, 204);
+        }
+        #popularPost > ul > li:hover{
+            background-color: rgb(204, 204, 204);
+        }
+        #popularPost > ul > li > div > div.author{
+            font-size: 1.5rem;
+            line-height: 2.5rem;
+        }
+
