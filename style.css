@@ -416,3 +416,25 @@ footer > a{
 footer > p > a{
     text-decoration: underline;
 }
+
+
+@media screen and (max-width:1200px){
+    .page{
+        display: block;
+    }
+    #content{
+        width: 100%;
+    }
+    aside.flex{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    nav{
+        display: none;
+    }
+    #header .intro{
+        margin-top: 0;
+    }
+}
